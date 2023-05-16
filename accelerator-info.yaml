@@ -1,0 +1,18 @@
+id: d209626b-27f9-4c59-961f-50e0a9318738
+timestamp: 2023-05-16T21:20:03Z
+username: guest
+source: TAP-GUI
+accelerator:
+  name: appsso-starter-java
+  source:
+    image: gcr.io/cf-identity-service-oak/tap-packages/1.6.0-build.22@sha256:26e01ec329a7fd50e59b7deab67e0af2fcd190668a46c13ef26606b114601a3e
+fragments:
+  - name: build-wrapper-gradle
+    source:
+      image: gcr.io/cf-identity-service-oak/tap-packages/1.6.0-build.22@sha256:5480259d6a29a11f0cc482cd304501d74ccd89dd7207f2d639d6f0d8eedc3bf8
+  - name: tap-workload
+    source:
+      image: gcr.io/cf-identity-service-oak/tap-packages/1.6.0-build.22@sha256:dbf0dedb6848ad8a7704c1c19465a1ddae9039b0e63c1dd0df3e2ed9cbda6093
+options:
+  includeBuildToolWrapper: true
+  projectName: appsso-starter-java
